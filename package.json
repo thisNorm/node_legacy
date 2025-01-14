@@ -1,14 +1,8 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
+
     "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
->>>>>>> Stashed changes
-=======
-    "ejs": "^3.1.10",
->>>>>>> 58f5e2a72d9b9a829adb4db8cb3e39c9993169b4
     "express": "^4.21.2"
   }
 }
