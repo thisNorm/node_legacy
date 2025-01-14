@@ -31,9 +31,9 @@ app.get('/contact', (req, res) => {
 
 app.post('/api/contact', (req, res) => {
     const name = req.body.name;
-    const phone = req.body.name;
-    const email = req.body.name;
-    const memo = req.body.name;
+    const phone = req.body.phone;
+    const email = req.body.email;
+    const memo = req.body.memo;
 
     const data = `${name} ${phone} ${email} ${memo}`
 
