@@ -37,7 +37,7 @@ app.post('/api/contact', (req, res) => {
 
     const data = `${name} ${phone} ${email} ${memo}`
 
-    res.send(data)
+    res.send(data);
 })
   
 app.listen(port, () => {
