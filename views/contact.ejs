@@ -1,16 +1,23 @@
-<%-include('layouts/header.ejs')%>
-
-<h2>문의하기</h2>
-<form action="/api/contact" method="post">
-    <ul>
-        <li>이름 : <input type="text" name="name" required></li>
-        <li>연락처 : <input type="text" name="phone" required></li>
-        <li>이메일 : <input type="text" name="email" required></li>
-        <li>내용 : <br>
-            <textarea name="memo" cols="50" rows="10"></textarea>
-        </li>
-        <button type="submit">문의하기</button>
-    </ul>
-</form>
-
-<%-include('layouts/footer.ejs')%>
+<!-- views/contact.ejs -->  
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title><%= title %></title>  
+</head>  
+<body>  
+    <%- include('./layouts/sidebar') %>  
+    <div class="main-content">  
+        <h1>문의하기</h1>  
+        <div class="contact-info">  
+            <h2>연락처 정보</h2>  
+            <ul>  
+                <li>이메일: <%= contactInfo.email %></li>  
+                <li>전화번호: <%= contactInfo.phone %></li>  
+                <li>카카오톡: <%= contactInfo.kakao %></li>  
+                <li>주소: <%= contactInfo.address %></li>  
+            </ul>  
+            <p>위 연락처로 문의해주시면 빠른 시일 내에 답변드리겠습니다.</p>  
+        </div>  
+    </div>  
+</body>  
+</html>

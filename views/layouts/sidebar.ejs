@@ -1,0 +1,13 @@
+<nav class="sidebar">  
+    <div class="logo">  
+        <h1>Logo</h1>  
+    </div>  
+    <ul class="nav-list">  
+        <li class="nav-item"><a href="/" class="<%= (currentPage === 'home') ? 'active' : '' %>">홈</a></li>  
+        <li class="nav-item"><a href="/profile" class="<%= (currentPage === 'profile') ? 'active' : '' %>">프로필</a></li>  
+        <li class="nav-item"><a href="/visit" class="<%= (currentPage === 'visit') ? 'active' : '' %>">찾아오시는길</a></li>  
+        <li class="nav-item"><a href="/blog" class="<%= (currentPage === 'blog') ? 'active' : '' %>">블로그</a></li>  
+        <li class="nav-item"><a href="/users" class="<%= (currentPage === 'users') ? 'active' : '' %>">회원</a></li>  
+        <li class="nav-item"><a href="/contact" class="<%= (currentPage === 'contact') ? 'active' : '' %>">문의하기</a></li>  
+    </ul>  
+</nav>
