@@ -5,11 +5,6 @@
     box-sizing: border-box;  
 }  
 
-html {  
-    scroll-behavior: smooth;  
-    height: 100%;  
-}  
-
 /* Progress Bar 스타일 수정 */  
 .progress-bar-container {  
     position: fixed;  
@@ -40,79 +35,52 @@ html {
     scrollbar-width: none;  /* Firefox */  
 }  
 
+html {  
+    scroll-behavior: smooth;  
+}  
+
 body {  
     margin: 0;  
     padding: 0;  
-    overflow-x: hidden;  
-    position: relative;  
-}   
+    overflow-y: auto;  
+    scroll-snap-type: y mandatory; /* proximity에서 mandatory로 변경 */  
+}  
 
-/* 나머지 기존 스타일 유지 */ 
+.container {  
+    width: 100%;  
+    min-height: 100vh;  
+    scroll-snap-type: y mandatory;  
+}  
 
-/* 섹션 공통 스타일 */  
 .section {  
     height: 100vh;  
     width: 100%;  
     display: flex;  
     justify-content: center;  
     align-items: center;  
-    scroll-snap-align: start; /* 각 섹션을 스냅 포인트로 설정 */  
+    scroll-snap-align: start;  
+    scroll-snap-stop: always; /* 강제 스냅 추가 */  
     position: relative;  
-    overflow: hidden; /* 섹션 내용 넘침 방지 */  
+    overflow: hidden;  
 }  
 
-/* 네비게이션 메뉴 스타일 */  
-.floating-menu {  
-    position: fixed;  
-    right: 20px;  
-    top: 50%;  
-    transform: translateY(-50%);  
-    background: white;  
-    padding: 20px;  
-    border-radius: 10px;  
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-    z-index: 1000;  
+/* 스크롤바 스타일링 (선택사항) */  
+::-webkit-scrollbar {  
+    width: 8px;  
 }  
 
-.floating-menu .logo {  
-    text-align: center;  
-    margin-bottom: 20px;  
-    font-weight: bold;  
+::-webkit-scrollbar-track {  
+    background: #f1f1f1;  
 }  
 
-.floating-menu a {  
-    display: block;  
-    margin: 15px 0;  
-    padding: 5px 15px;  
-    text-decoration: none;  
-    color: #333;  
-    transition: all 0.3s ease;  
-    border-radius: 5px;  
-    font-weight: 500;  
-    position: relative;  
+::-webkit-scrollbar-thumb {  
+    background: #888;  
+    border-radius: 4px;  
 }  
 
-.floating-menu a.active {  
-    color: #007bff;  
-    font-weight: 700;  
-    background: transparent;  
-}  
-
-.floating-menu a.active::before {  
-    content: '';  
-    position: absolute;  
-    left: 0;  
-    top: 50%;  
-    transform: translateY(-50%);  
-    width: 3px;  
-    height: 70%;  
-    background-color: #007bff;  
-    border-radius: 2px;  
-}  
-
-.floating-menu a:hover {  
-    color: #007bff;  
-}  
+::-webkit-scrollbar-thumb:hover {  
+    background: #555;  
+} 
 
 /* 섹션별 배경 스타일 */  
 #home {  
@@ -127,7 +95,7 @@ body {
     background: linear-gradient(135deg, #E8F0F9 0%, #EDE8F9 100%);  
 }  
 
-#visit {  
+#stack {  
     background: linear-gradient(135deg, #E8F9F1 0%, #E8F3F9 100%);  
 }  
 

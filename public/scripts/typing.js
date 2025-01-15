@@ -1,64 +1,86 @@
-// public/scripts/typing.js  
 class TypeWriter {  
     constructor(txtElement, words, wait = 3000) {  
-        this.txtElement = txtElement;  
+        this.container = txtElement.parentElement;  
         this.words = words;  
-        this.txt = '';  
-        this.wordIndex = 0;  
         this.wait = parseInt(wait, 10);  
+        this.currentLine = 0;  
+        this.currentText = '';  
+        this.init();  
+    }  
+
+    init() {  
+        // 기존 내용 초기화  
+        this.container.innerHTML = '';  
+        this.currentLine = 0;  
+        this.currentText = '';  
+        this.lineElements = [];  
+        this.createLines();  
         this.type();  
-        this.isDeleting = false;  
+    }  
+
+    createLines() {  
+        this.words.forEach(() => {  
+            const line = document.createElement('div');  
+            line.className = 'typing-text';  
+            this.container.appendChild(line);  
+            this.lineElements.push(line);  
+        });  
     }  
 
     type() {  
-        // 현재 단어 인덱스  
-        const current = this.wordIndex % this.words.length;  
-        // 현재 단어의 전체 텍스트  
-        const fullTxt = this.words[current];  
+        if (this.currentLine >= this.words.length) return;  
 
-        // 삭제 중인지 체크  
-        if(this.isDeleting) {  
-            // 글자 삭제  
-            this.txt = fullTxt.substring(0, this.txt.length - 1);  
+        const currentWord = this.words[this.currentLine];  
+        const currentElement = this.lineElements[this.currentLine];  
+
+        if (this.currentText.length < currentWord.length) {  
+            // 현재 줄 타이핑 진행  
+            this.currentText = currentWord.substring(0, this.currentText.length + 1);  
+            currentElement.innerHTML = `<span class="txt">${this.currentText}</span>`;  
+            setTimeout(() => this.type(), 100); // 타이핑 속도를 좀 더 빠르게 조정  
         } else {  
-            // 글자 추가  
-            this.txt = fullTxt.substring(0, this.txt.length + 1);  
+            // 현재 줄 완성  
+            currentElement.innerHTML = currentWord; // 커서 제거  
+            this.currentLine++;  
+            this.currentText = '';  
+            
+            if (this.currentLine < this.words.length) {  
+                setTimeout(() => this.type(), 500); // 다음 줄로 넘어가는 딜레이  
+            }  
         }  
+    }  
 
-        // 텍스트 요소에 삽입  
-        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;  
-
-        // 타이핑 속도  
-        let typeSpeed = 200;  
-
-        if(this.isDeleting) {  
-            typeSpeed /= 2;  
-        }  
-
-        // 단어가 완성되었는지 체크  
-        if(!this.isDeleting && this.txt === fullTxt) {  
-            // 단어 완성 후 잠시 멈춤  
-            typeSpeed = this.wait;  
-            this.isDeleting = true;  
-        } else if(this.isDeleting && this.txt === '') {  
-            this.isDeleting = false;  
-            this.wordIndex++;  
-            // 다음 단어 입력 전 잠시 멈춤  
-            typeSpeed = 500;  
-        }  
-
-        setTimeout(() => this.type(), typeSpeed);  
+    restart() {  
+        this.init();  
     }  
 }  
 
-// DOM 로드 시 실행  
-document.addEventListener('DOMContentLoaded', init);  
+// Intersection Observer 설정  
+const observer = new IntersectionObserver((entries) => {  
+    entries.forEach(entry => {  
+        if (entry.isIntersecting) {  
+            const txtElement = document.querySelector('.text-content .typing-text');  
+            if (txtElement && window.typeWriter) {  
+                window.typeWriter.restart();  
+            }  
+        }  
+    });  
+}, { threshold: 0.5 });  
 
-function init() {  
-    const txtElement = document.querySelector('.typing-text');  
-    const words = txtElement.getAttribute('data-typing-text').split(',');  
+// DOM 로드 시 실행  
+document.addEventListener('DOMContentLoaded', () => {  
+    const txtElement = document.querySelector('.text-content .typing-text');  
+    if (!txtElement) return;  
+
+    const words = txtElement.getAttribute('data-typing-text').split(',').map(word => word.trim());  
     const wait = txtElement.getAttribute('data-wait') || 3000;  
 
-    // TypeWriter 인스턴스 생성  
-    new TypeWriter(txtElement, words, wait);  
-}
+    // TypeWriter 인스턴스 생성 및 전역 변수로 저장  
+    window.typeWriter = new TypeWriter(txtElement, words, wait);  
+
+    // 홈 섹션 관찰 시작  
+    const homeSection = document.querySelector('#home');  
+    if (homeSection) {  
+        observer.observe(homeSection);  
+    }  
+});

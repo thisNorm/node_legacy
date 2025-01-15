@@ -1,0 +1,138 @@
+.stack-section {  
+    padding: 40px 20px;  
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);  
+}  
+
+.section-title {  
+    text-align: center;  
+    font-size: 2.5rem;  
+    margin-bottom: 40px;  
+    color: #333;  
+}  
+
+.point-color {  
+    color: #007bff;  
+}  
+
+.stack-container {  
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 40px;  
+    max-width: 1400px;  
+    margin: 0 auto;  
+    padding: 20px;  
+}  
+
+.stack-item {  
+    background: white;  
+    border-radius: 15px;  
+    padding: 30px;  
+    text-align: center;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s ease;  
+    cursor: pointer;  
+}  
+
+.stack-item:hover {  
+    transform: translateY(-5px);  
+}  
+
+.stack-image-wrapper {  
+    width: 200px;  
+    height: 200px;  
+    margin: 0 auto 20px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+}  
+
+.stack-img {  
+    max-width: 100%;  
+    height: auto;  
+    transition: transform 0.3s ease;  
+}  
+
+.stack-item:hover .stack-img {  
+    transform: scale(1.1);  
+}  
+
+.stack-name {  
+    display: block;  
+    font-size: 1.4rem;  
+    font-weight: 500;  
+    color: #333;  
+    margin-top: 15px;  
+}  
+
+/* 스택별 특수 스타일 */  
+.oracle-color { filter: brightness(1.1); }  
+.html-color { filter: brightness(1.05) saturate(1.2); }  
+.java-color { filter: brightness(1.1) saturate(1.1); }  
+.python-color { filter: brightness(1.05) saturate(1.2); }  
+.c-color { filter: brightness(1.1); }  
+.r-color { filter: brightness(1.05); }  
+
+/* 반응형 디자인 */  
+@media (max-width: 768px) {  
+    .stack-container {  
+        grid-template-columns: repeat(3, 1fr);  
+        gap: 30px;  
+    }  
+
+    .section-title {  
+        font-size: 2rem;  
+    }  
+
+    .stack-image-wrapper {  
+        width: 150px;  
+        height: 150px;  
+    }  
+
+    .stack-name {  
+        font-size: 1.2rem;  
+    }  
+}  
+
+@media (max-width: 480px) {  
+    .stack-container {  
+        grid-template-columns: repeat(3, 1fr);  
+        gap: 15px;  
+    }  
+
+    .section-title {  
+        font-size: 1.8rem;  
+    }  
+
+    .stack-image-wrapper {  
+        width: 100px;  
+        height: 100px;  
+    }  
+
+    .stack-name {  
+        font-size: 1rem;  
+    }  
+}  
+
+/* 애니메이션 */  
+@keyframes fadeInUp {  
+    from {  
+        opacity: 0;  
+        transform: translateY(20px);  
+    }  
+    to {  
+        opacity: 1;  
+        transform: translateY(0);  
+    }  
+}  
+
+.stack-item {  
+    opacity: 0;  
+    animation: fadeInUp 0.6s ease forwards;  
+}  
+
+.stack-item:nth-child(1) { animation-delay: 0.1s; }  
+.stack-item:nth-child(2) { animation-delay: 0.2s; }  
+.stack-item:nth-child(3) { animation-delay: 0.3s; }  
+.stack-item:nth-child(4) { animation-delay: 0.4s; }  
+.stack-item:nth-child(5) { animation-delay: 0.5s; }  
+.stack-item:nth-child(6) { animation-delay: 0.6s; }

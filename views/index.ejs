@@ -1,57 +1,67 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>포트폴리오</title>  
-    <!-- jQuery 추가 (반드시 다른 스크립트들 전에 로드) -->  
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <!-- jQuery 추가 (반드시 다른 스크립트들 전에 로드) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- 폰트 관련 리소스를 먼저 로드 -->  
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
     
-    <link rel="stylesheet" href="/styles/layout.css">  
+    <!-- 자체 스타일시트 -->  
     <link rel="stylesheet" href="/styles/main.css">  
     <link rel="stylesheet" href="/styles/navStyle.css">  
     <link rel="stylesheet" href="/styles/styles.css">  
-    <link rel="stylesheet" href="/styles/profileStyle.css">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
-</head>  
-<body>  
-    <!-- Progress Bar 추가 -->  
-    <div class="progress-bar-container">  
-        <div class="progress-bar"></div>  
-    </div>  
+    <link rel="stylesheet" href="/styles/profileStyle.css">   
+</head>
 
-    <!-- 홈 섹션은 직접 포함 -->  
-    <section id="home" class="section">  
-        <div class="home-container">  
-            <div class="content-wrapper">  
-                <div class="profile-image">  
-                    <img src="/images/profile.png" alt="프로필 이미지">  
-                </div>  
-                <div class="text-content">  
-                    <div class="typing-text" data-typing-text="안녕하세요 :),개발꿈나무입니다" style="display: block !important; visibility: visible !important;"></div>  
-                </div>   
-            </div>  
+<body>
+    <!-- Progress Bar 추가 -->
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <!-- 홈 섹션은 직접 포함 -->
+    <section id="home" class="section">
+        <div class="home-container">
+            <div class="content-wrapper">
+                <div class="profile-image">
+                    <img src="/images/profile.png" alt="프로필 이미지">
+                </div>
+                <div class="text-content">
+                    <div class="typing-text" data-typing-text="안녕하세요 :), 개발꿈나무 황규범입니다."></div>
+                </div>
+            </div>
+        </div>
+        <div class="more-btn-container">  
             <button class="more-btn" id="moreBtn">More</button>  
-        </div>  
-    </section>  
+        </div> 
+    </section>
 
-    <!-- 나머지 섹션들은 동적으로 로드 -->  
-    <section id="profile" class="section"></section>  
-    <section id="blog" class="section"></section>  
-    <section id="visit" class="section"></section>  
-    <section id="contact" class="section"></section>  
+    <!-- 나머지 섹션들은 동적으로 로드 -->
+    <section id="profile" class="section"></section>
+    <section id="blog" class="section"></section>
+    <section id="stack" class="section"></section>
+    <section id="contact" class="section"></section>
 
-    <div class="floating-menu">  
-        <div class="logo">Logo</div>  
-        <a href="#home" class="active">홈</a>  
-        <a href="#profile">프로필</a>  
-        <a href="#blog">블로그</a>  
-        <a href="#visit">찾아오시는길</a>  
-        <a href="#contact">문의하기</a>  
-    </div>  
+    <div class="floating-menu">
+        <div class="logo">Logo</div>
+        <a href="#home" class="active">홈</a>
+        <a href="#profile">프로필</a>
+        <a href="#blog">블로그</a>
+        <a href="#stack">기술 스택</a>
+        <a href="#contact">문의하기</a>
+    </div>
 
-    <script src="/scripts/scripts.js"></script>  
-    <script src="/scripts/typing.js"></script>  
-    <script src="/scripts/main.js"></script>  
-</body>  
+    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/typing.js"></script>
+    <script src="/scripts/main.js"></script>
+</body>
+
 </html>

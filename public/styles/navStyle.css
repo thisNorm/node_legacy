@@ -1,62 +1,66 @@
 /* public/styles/navStyle.css */  
-.sidebar {  
+.floating-menu {  
   position: fixed;  
   top: 50%;  
-  right: 0;  
+  right: 20px;  
   transform: translateY(-50%);  
   width: 200px;  
   background-color: #fff;  
   padding: 20px;  
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
   z-index: 1000;  
-  border-radius: 10px 0 0 10px;  
+  border-radius: 10px;  
 }  
 
-.logo {  
+.floating-menu .logo {  
   text-align: center;  
   margin-bottom: 20px;  
   padding-bottom: 15px;  
-  border-bottom: 1px solid #eee;  
+  border-bottom: 2px solid #007bff;  
+  font-weight: bold;  
 }  
 
-.nav-list {  
-  list-style: none;  
-  padding: 0;  
-  margin: 0;  
-}  
-
-.nav-item {  
-  margin: 5px 0;  
-}  
-
-.nav-item a {  
+.floating-menu a {  
   display: block;  
   padding: 12px 20px;  
   color: #333;  
   text-decoration: none;  
   transition: all 0.3s ease;  
   border-radius: 5px;  
-  text-align: right;  
   font-weight: 500;  
+  position: relative;  
+  margin: 5px 0;  
 }  
 
-.nav-item a:hover {  
-  background-color: #f0f0f0;  
+.floating-menu a:hover {  
+  color: #007bff;  
   transform: translateX(-5px);  
 }  
 
-.nav-item a.active {  
+.floating-menu a.active {  
+  color: #007bff;  
+  font-weight: 700;  
+}  
+
+.floating-menu a.active::before {  
+  content: '';  
+  position: absolute;  
+  left: 0;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  width: 3px;  
+  height: 70%;  
   background-color: #007bff;  
-  color: #fff;  
+  border-radius: 2px;  
 }  
 
 /* 반응형 디자인 */  
 @media (max-width: 768px) {  
-  .sidebar {  
+  .floating-menu {  
       width: 150px;  
   }  
   
-  .nav-item a {  
+  .floating-menu a {  
       padding: 10px 15px;  
       font-size: 0.9em;  
   }  

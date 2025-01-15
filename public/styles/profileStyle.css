@@ -3,6 +3,8 @@
     padding: 80px 20px;  
     max-width: 1200px;  
     margin: 0 auto;  
+    font-family: 'Jua', sans-serif;  /* 이것만 추가하면 모든 하위 요소에 적용됨 */  
+
 }  
 
 .about-title {  
