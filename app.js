@@ -90,7 +90,7 @@ app.get('/contactList', (req, res) => {
 
 app.post('/api/contactDelete/:id', (req, res) => {
     const id = req.params.id;
-    const deleteQuery = `DELETE FROM CONTACT WHERE ID='${ID}'`
+    const deleteQuery = `DELETE FROM CONTACT WHERE ID='${id}'`
     connectionPool.query(deleteQuery, (err, result) => {
         if (err) {
             console.error('데이터 삭제 중 에러 발생: ', err);
