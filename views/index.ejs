@@ -1,6 +1,57 @@
-<%-include('layouts/header.ejs')%>
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>포트폴리오</title>  
+    <!-- jQuery 추가 (반드시 다른 스크립트들 전에 로드) -->  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    
+    <link rel="stylesheet" href="/styles/layout.css">  
+    <link rel="stylesheet" href="/styles/main.css">  
+    <link rel="stylesheet" href="/styles/navStyle.css">  
+    <link rel="stylesheet" href="/styles/styles.css">  
+    <link rel="stylesheet" href="/styles/profileStyle.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+</head>  
+<body>  
+    <!-- Progress Bar 추가 -->  
+    <div class="progress-bar-container">  
+        <div class="progress-bar"></div>  
+    </div>  
 
-    <h2>메인페이지 입니다.</h2>
-    <img src="/5.png">
+    <!-- 홈 섹션은 직접 포함 -->  
+    <section id="home" class="section">  
+        <div class="home-container">  
+            <div class="content-wrapper">  
+                <div class="profile-image">  
+                    <img src="/images/profile.png" alt="프로필 이미지">  
+                </div>  
+                <div class="text-content">  
+                    <div class="typing-text" data-typing-text="안녕하세요 :),개발꿈나무입니다" style="display: block !important; visibility: visible !important;"></div>  
+                </div>   
+            </div>  
+            <button class="more-btn" id="moreBtn">More</button>  
+        </div>  
+    </section>  
 
-<%-include('layouts/footer.ejs')%>
+    <!-- 나머지 섹션들은 동적으로 로드 -->  
+    <section id="profile" class="section"></section>  
+    <section id="blog" class="section"></section>  
+    <section id="visit" class="section"></section>  
+    <section id="contact" class="section"></section>  
+
+    <div class="floating-menu">  
+        <div class="logo">Logo</div>  
+        <a href="#home" class="active">홈</a>  
+        <a href="#profile">프로필</a>  
+        <a href="#blog">블로그</a>  
+        <a href="#visit">찾아오시는길</a>  
+        <a href="#contact">문의하기</a>  
+    </div>  
+
+    <script src="/scripts/scripts.js"></script>  
+    <script src="/scripts/typing.js"></script>  
+    <script src="/scripts/main.js"></script>  
+</body>  
+</html>
