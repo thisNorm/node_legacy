@@ -26,6 +26,7 @@
             <td><%=item.create_at%></td>
             <td><%=item.modify_at%></td>
             <td>
+                <!-- <button type="button" data-contactId="<%= item.id %>" onclick="updateContact(this.dataset.contactId)"> UPDATE </button> -->
                 <button type="button" onclick="updateContact(<%=item.id%>)"> UPDATE </button>
             </td>
             <td>
