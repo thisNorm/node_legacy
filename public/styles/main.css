@@ -1,118 +1,146 @@
-/* main.css */  
-* {  
-    margin: 0;  
-    padding: 0;  
-    box-sizing: border-box;  
-}  
+/* main.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Progress Bar 스타일 수정 */  
-.progress-bar-container {  
-    position: fixed;  
-    top: 0;  
-    left: 0;  
-    width: 100%;  
-    height: 3px; /* 프로그레스 바 높이 조절 */  
-    background: rgba(131, 136, 199, 0.2); /* 배경색을 보라색 계열로 */  
-    z-index: 9999; /* 최상단에 표시되도록 z-index 높임 */  
-}  
+/* Progress Bar 스타일 수정 */
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    /* 프로그레스 바 높이 조절 */
+    background: rgba(131, 136, 199, 0.2);
+    /* 배경색을 보라색 계열로 */
+    z-index: 9999;
+    /* 최상단에 표시되도록 z-index 높임 */
+}
 
-.progress-bar {  
-    width: 0;  
-    height: 100%;  
-    background: #8388c7; /* 보라색으로 통일 */  
-    transition: width 0.05s ease-out;  
-    position: relative;  
-}  
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #8388c7;
+    /* 보라색으로 통일 */
+    transition: width 0.05s ease-out;
+    position: relative;
+}
 
-/* 기존 스크롤바 숨기기 */  
-::-webkit-scrollbar {  
-    display: none;  
-}  
+/* 기존 스크롤바 숨기기 */
+::-webkit-scrollbar {
+    display: none;
+}
 
-/* IE, Edge, Firefox에서도 스크롤바 숨기기 */  
-* {  
-    -ms-overflow-style: none;  /* IE, Edge */  
-    scrollbar-width: none;  /* Firefox */  
-}  
+/* IE, Edge, Firefox에서도 스크롤바 숨기기 */
+* {
+    -ms-overflow-style: none;
+    /* IE, Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
 
-html {  
-    scroll-behavior: smooth;  
-}  
+html {
+    scroll-behavior: smooth;
+}
 
-body {  
-    margin: 0;  
-    padding: 0;  
-    overflow-y: auto;  
-    scroll-snap-type: y mandatory; /* proximity에서 mandatory로 변경 */  
-}  
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    /* proximity에서 mandatory로 변경 */
+}
 
-.container {  
-    width: 100%;  
-    min-height: 100vh;  
-    scroll-snap-type: y mandatory;  
-}  
+.container {
+    width: 100%;
+    min-height: 100vh;
+    scroll-snap-type: y mandatory;
+}
 
-.section {  
-    height: 100vh;  
-    width: 100%;  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    scroll-snap-align: start;  
-    scroll-snap-stop: always; /* 강제 스냅 추가 */  
-    position: relative;  
-    overflow: hidden;  
-}  
+.section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    /* 강제 스냅 추가 */
+    position: relative;
+    overflow: hidden;
+}
 
-/* 스크롤바 스타일링 (선택사항) */  
-::-webkit-scrollbar {  
-    width: 8px;  
-}  
+/* 스크롤바 스타일링 (선택사항) */
+::-webkit-scrollbar {
+    width: 30px;
+}
 
-::-webkit-scrollbar-track {  
-    background: #f1f1f1;  
-}  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
-::-webkit-scrollbar-thumb {  
-    background: #888;  
-    border-radius: 4px;  
-}  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
 
-::-webkit-scrollbar-thumb:hover {  
-    background: #555;  
-} 
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
-/* 섹션별 배경 스타일 */  
-#home {  
-    background: linear-gradient(135deg, #E8F3F9 0%, #FFF9F5 100%);  
-}  
+/* 섹션별 배경 스타일 */
+#home {
+    background: linear-gradient(135deg, #E8F3F9 0%, #FFF9F5 100%);
+}
 
-#profile {  
-    background: linear-gradient(135deg, #F9F3E8 0%, #F5E6E8 100%);  
-}  
+#profile {
+    background: linear-gradient(135deg, #F9F3E8 0%, #F5E6E8 100%);
+}
 
-#blog {  
-    background: linear-gradient(135deg, #E8F0F9 0%, #EDE8F9 100%);  
-}  
+#blog {
+    background: linear-gradient(135deg, #E8F0F9 0%, #EDE8F9 100%);
+}
 
-#stack {  
-    background: linear-gradient(135deg, #E8F9F1 0%, #E8F3F9 100%);  
-}  
+#stack {
+    background: linear-gradient(135deg, #E8F9F1 0%, #E8F3F9 100%);
+}
 
-#contact {  
-    background: linear-gradient(135deg, #F9E8F0 0%, #F5F9FF 100%);  
-}  
+#project {
+    background: linear-gradient(135deg, #F0E8F9 0%, #E8F9F5 100%);
+}
 
-/* 스크롤바 스타일링 (선택사항) */  
-body::-webkit-scrollbar {  
-    width: 8px;  
-}  
+#contact {
+    background: linear-gradient(135deg, #F9E8F0 0%, #F5F9FF 100%);
+}
 
-body::-webkit-scrollbar-track {  
-    background: transparent;  
-}  
+/* 스크롤바 스타일링 (선택사항) */
+body::-webkit-scrollbar {
+    width: 8px;
+}
 
-body::-webkit-scrollbar-thumb {  
-    background-color: rgba(131, 136, 199, 0.5); /* 기존 보라색과 맞춤 */  
-    border-radius: 4px;  
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(131, 136, 199, 0.5);
+    /* 기존 보라색과 맞춤 */
+    border-radius: 4px;
+}
+
+.blog-card,
+.stack-item,
+.project-card,
+.contact-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+    will-change: transform, opacity;
+}
+
+.animated {
+    opacity: 1;
+    transform: translateY(0);
 }

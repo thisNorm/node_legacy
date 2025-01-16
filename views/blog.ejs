@@ -1,42 +1,50 @@
-<section id="blog" class="blog-section">  
-    <h1 class="section-title">Blog.</h1>  
-    
-    <div class="blog-container">  
-        <!-- 네이버 블로그 -->  
-        <div class="blog-card">  
-            <img src="/images/naver.png" alt="네이버 블로그">  
-            <div class="blog-info">  
-                <h3>네이버 블로그</h3>  
-                <p>개발 일지와 기술 블로그</p>  
-                <a href="https://blog.naver.com/gyubams" target="_blank" class="blog-link">  
-                    <i class="fas fa-external-link-alt"></i> 방문하기  
-                </a>  
-            </div>  
-        </div>  
+<link rel="stylesheet" href="/styles/blog.css">
 
-        <!-- 티스토리 -->  
-        <div class="blog-card">  
-            <img src="/images/tistory.png" alt="티스토리 블로그">  
-            <div class="blog-info">  
-                <h3>티스토리</h3>  
-                <p>기술 문서 및 프로젝트 기록</p>  
-                <a href="https://thisnorm.tistory.com/" target="_blank" class="blog-link">  
-                    <i class="fas fa-external-link-alt"></i> 방문하기  
-                </a>  
-            </div>  
-        </div>  
+<section id="blog" class="blog-section">
+    <h2 class="blog-title">Blog</h2>
+    <div class="blog-container">
+        <!-- 네이버 블로그 -->
+        <div class="blog-card" style="visibility: visible">
+            <div class="blog-image-container">
+                <img src="/images/naver.png" alt="네이버 블로그" class="blog-img">
+            </div>
+            <div class="blog-info">
+                <h3>네이버 블로그</h3>
+                <p>개발 일지와 기술 블로그</p>
+                <a href="https://blog.naver.com/gyubams" target="_blank" class="blog-link">
+                    <i class="fas fa-external-link-alt"></i> 방문하기
+                </a>
+            </div>
+        </div>
 
-        <!-- Notion -->  
-        <div class="blog-card">  
-            <img src="/images/notion.png" alt="Notion">  
-            <div class="blog-info">  
-                <h3>Notion</h3>  
-                <p>학습 기록 및 지식 베이스</p>   
-            </div>  
-        </div>  
-    </div>  
-</section>  
+        <!-- 티스토리 -->
+        <div class="blog-card" style="visibility: visible">
+            <div class="blog-image-container">
+                <img src="/images/tistory.png" alt="티스토리 블로그" class="blog-img">
+            </div>
+            <div class="blog-info">
+                <h3>티스토리</h3>
+                <p>기술 문서 및 프로젝트 기록</p>
+                <a href="https://thisnorm.tistory.com/" target="_blank" class="blog-link">
+                    <i class="fas fa-external-link-alt"></i> 방문하기
+                </a>
+            </div>
+        </div>
 
-<!-- 스타일과 스크립트 링크 -->  
-<link rel="stylesheet" href="/styles/blog.css">  
-<script src="/scripts/blog.js"></script>
+        <!-- Notion -->
+        <div class="blog-card" style="visibility: visible">
+            <div class="blog-image-container">
+                <img src="/images/notion.png" alt="Notion" class="blog-img">
+            </div>
+            <div class="blog-info">
+                <h3>Notion</h3>
+                <p>학습 기록 및 지식 베이스</p>
+                <a href="#" target="_blank" class="blog-link">
+                    <i class="fas fa-external-link-alt"></i> 방문하기
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/scripts/animations.js"></script>

@@ -1,98 +1,100 @@
-<!-- views/contact.ejs -->  
-<link rel="stylesheet" href="/styles/contact.css">  
+<!-- views/contact.ejs -->
+<link rel="stylesheet" href="/styles/contact.css">
 
-<section class="contact-section" id="contact">  
-    <h1 class="section-title">Contact<span class="point-color">.</span></h1>  
-    
-    <div class="contact-container">  
-        <div class="contact-card">  
-            <div class="contact-header">  
-                <h2>Let's Connect!</h2>  
-                <p class="contact-subtitle">아래 연락처로 언제든 연락주세요.</p>  
-            </div>  
+<section class="contact-section" id="contact">
+    <h1 class="contact-title">Contact<span class="point-color">.</span></h1>
 
-            <div class="contact-grid">  
-                <div class="contact-item">  
-                    <i class="fas fa-envelope"></i>  
-                    <div class="contact-info">  
-                        <h3>Email</h3>  
-                        <div class="email-container">  
-                            <div class="email-item">  
-                                <span class="email-type">Naver</span>  
-                                <p class="naver">  
-                                    <a href="<%= contactInfo.naver.link %>">  
-                                        <%= contactInfo.naver.email %>  
-                                    </a>  
-                                </p>  
-                            </div>  
-                            <div class="email-item">  
-                                <span class="email-type">Google</span>  
-                                <p class="google">  
-                                    <a href="<%= contactInfo.google.link %>">  
-                                        <%= contactInfo.google.email %>  
-                                    </a>  
-                                </p>  
-                            </div>  
-                        </div>  
-                    </div>  
-                </div>  
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-header">
+                <h2>Let's Connect!</h2>
+                <p class="contact-subtitle">아래 연락처로 언제든 연락주세요.</p>
+            </div>
 
-                <div class="contact-item">  
-                    <i class="fas fa-phone"></i>  
-                    <div class="contact-info">  
-                        <h3>Phone</h3>  
-                        <span class="contact-type">Phone Number</span>  
-                        <p>  
-                            <a href="<%= contactInfo.phone.link %>">  
-                                <%= contactInfo.phone.number %>  
-                            </a>  
-                        </p>  
-                    </div>  
-                </div>  
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <div class="email-container">
+                            <div class="email-item">
+                                <span class="email-type">Naver</span>
+                                <p class="naver">
+                                    <a href="<%= contactInfo.naver.link %>">
+                                        <%= contactInfo.naver.email %>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="email-item">
+                                <span class="email-type">Google</span>
+                                <p class="google">
+                                    <a href="<%= contactInfo.google.link %>">
+                                        <%= contactInfo.google.email %>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="contact-item">  
-                    <i class="fas fa-comment"></i>  
-                    <div class="contact-info">  
-                        <h3>KakaoTalk</h3>  
-                        <span class="contact-type">KakaoTalk ID</span>  
-                        <p>  
-                            <a href="<%= contactInfo.kakao.link %>">  
-                                <%= contactInfo.kakao.id %>  
-                            </a>  
-                        </p>  
-                    </div>  
-                </div>  
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-info">
+                        <h3>Phone</h3>
+                        <span class="contact-type">Phone Number</span>
+                        <p>
+                            <a href="<%= contactInfo.phone.link %>">
+                                <%= contactInfo.phone.number %>
+                            </a>
+                        </p>
+                    </div>
+                </div>
 
-                <div class="contact-item">  
-                    <i class="fas fa-map-marker-alt"></i>  
-                    <div class="contact-info">  
-                        <h3>Location</h3>  
-                        <span class="contact-type">Address</span>  
-                        <p>  
-                            <a href="<%= contactInfo.address.link %>">  
-                                <%= contactInfo.address.text %>  
-                            </a>  
-                        </p>  
-                    </div>  
-                </div>  
+                <div class="contact-item">
+                    <i class="fas fa-comment"></i>
+                    <div class="contact-info">
+                        <h3>KakaoTalk</h3>
+                        <span class="contact-type">KakaoTalk ID</span>
+                        <p>
+                            <a href="<%= contactInfo.kakao.link %>">
+                                <%= contactInfo.kakao.id %>
+                            </a>
+                        </p>
+                    </div>
+                </div>
 
-                <div class="contact-item">  
-                    <i class="fab fa-github"></i>  
-                    <div class="contact-info">  
-                        <h3>GitHub</h3>  
-                        <span class="contact-type">GitHub Profile</span>  
-                        <p>  
-                            <a href="<%= contactInfo.github.link %>">  
-                                <%= contactInfo.github.username %>  
-                            </a>  
-                        </p>  
-                    </div>  
-                </div>  
-            </div>  
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-info">
+                        <h3>Location</h3>
+                        <span class="contact-type">Address</span>
+                        <p>
+                            <a href="<%= contactInfo.address.link %>">
+                                <%= contactInfo.address.text %>
+                            </a>
+                        </p>
+                    </div>
+                </div>
 
-            <div class="contact-footer">  
-                <p>빠른 시일 내에 답변드리도록 하겠습니다.</p>  
-            </div>  
-        </div>  
-    </div>  
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div class="contact-info">
+                        <h3>GitHub</h3>
+                        <span class="contact-type">GitHub Profile</span>
+                        <p>
+                            <a href="<%= contactInfo.github.link %>">
+                                <%= contactInfo.github.username %>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-footer">
+                <p>빠른 시일 내에 답변드리도록 하겠습니다.</p>
+            </div>
+        </div>
+    </div>
 </section>
+
+<script src="/public/scripts/animations.js"></script>  

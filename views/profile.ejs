@@ -1,57 +1,60 @@
 <!-- profile.ejs -->
-<link rel="stylesheet" href="/styles/modal.css">  
+<link rel="stylesheet" href="/styles/modal.css">
 
-<section id="about" class="about-section">  
-    <h1 class="about-title">About.</h1>  
+<section id="about" class="about-section">
+    <h1 class="about-title">About.</h1>
 
-    <div class="about-container">  
-        <div class="profile-image-container">  
-            <img src="/images/profile2.png" alt="프로필 이미지">  
-        </div>  
+    <div class="about-container">
+        <div class="profile-image-container">
+            <img src="/images/profile2.png" alt="프로필 이미지">
+        </div>
 
-        <div class="profile-info">   
-            <div class="info-row">  
-                <div class="info-label">이름</div>  
-                <div class="info-value">황규범</div>  
-            </div>  
-            <div class="info-row">  
-                <div class="info-label">생년월일</div>  
-                <div class="info-value">00.05.03</div>  
-            </div>  
-            <div class="info-row">  
-                <div class="info-label">거주지</div>  
-                <div class="info-value">인천시 남구</div>  
-            </div>  
-            <div class="info-row">  
-                <div class="info-label">학교/전공</div>  
-                <div class="info-value">홍익대학교 세종캠퍼스</div>  
-            </div>  
-            <div class="info-row">  
-                <div class="info-label">주전공</div>  
-                <div class="info-value">소프트웨어융합</div>  
-            </div>  
-            <div class="info-row">  
-                <div class="info-label">부전공</div>  
-                <div class="info-value">빅데이터비즈니스</div>  
-            </div>  
+        <div class="profile-info">
+            <div class="info-row">
+                <div class="info-label">이름</div>
+                <div class="info-value">황규범</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">생년월일</div>
+                <div class="info-value">00.05.03</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">거주지</div>
+                <div class="info-value">인천시 남구</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">학교/전공</div>
+                <div class="info-value">홍익대학교 세종캠퍼스</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">주전공</div>
+                <div class="info-value">소프트웨어융합</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">부전공</div>
+                <div class="info-value">빅데이터비즈니스</div>
+            </div>
 
-            <div class="profile-buttons">  
-                <button class="profile-btn" data-modal="hobby">  
-                    <i class="fas fa-comment"></i>  
-                    <span>취미</span>  
-                </button>  
-                <button class="profile-btn" data-modal="personality">  
-                    <i class="fas fa-heart"></i>  
-                    <span>성격</span>  
-                </button>  
-            </div>  
-        </div>  
-    </div>  
-
-<!-- 모달 include -->  
-<%- include('./partials/modals/hobby-modal') %>  
-<%- include('./partials/modals/personality-modal') %>  
+            <div class="profile-buttons">
+                <button class="profile-btn" data-modal="hobby">
+                    <i class="fas fa-comment"></i>
+                    <span>취미</span>
+                </button>
+                <button class="profile-btn" data-modal="personality">
+                    <i class="fas fa-heart"></i>
+                    <span>성격</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
+<!-- 모달 템플릿 포함 -->
+<%- include('partials/modals/hobby-modal') %>
+    <%- include('partials/modals/personality-modal') %>
 
-<!-- 스타일과 스크립트 -->  
-<script src="/scripts/modal.js"></script>  
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- Scripts -->
+        <script src="/scripts/modal.js"></script>
+        <script src="/scripts/animations.js"></script>
